@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DAY 1 - DEVICES.md",
+                "file": "DAY 1 - Network Devices.md",
                 "mode": "source",
                 "source": false
               }
@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DAY 2.md",
+                "file": "DAY 2 - Interfaces and Cables.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DAY 2.md",
+                "file": "DAY 2 - Interfaces and Cables.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DAY 2.md",
+                "file": "DAY 2 - Interfaces and Cables.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DAY 2.md"
+                "file": "DAY 2 - Interfaces and Cables.md"
               }
             }
           },
@@ -172,8 +172,8 @@
   },
   "active": "ff7c93b74fcbac7b",
   "lastOpenFiles": [
-    "DAY 1 - DEVICES.md",
-    "DAY 2.md",
+    "DAY 1 - Network Devices.md",
+    "DAY 2 - Interfaces and Cables.md",
     "README.md",
     "img/README-3.png",
     "img/README-2.png",
