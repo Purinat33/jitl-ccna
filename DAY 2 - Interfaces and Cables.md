@@ -1,1 +1,1 @@
-IEEE 802.3
+IEEE 802.3 Standards
