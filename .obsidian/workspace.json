@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "DAY 1 - DEVICES.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "DAY 1 - DEVICES.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "DAY 1 - DEVICES.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "DAY 1 - DEVICES.md"
+                "file": "README.md"
               }
             }
           },
@@ -159,9 +159,17 @@
   },
   "active": "1790dbf81b94ff55",
   "lastOpenFiles": [
+    "img/README-3.png",
+    "img/README-2.png",
+    "img/README.webp",
+    "img/README-1.png",
+    "img/README.jpg",
+    "DAY 1 - DEVICES.md",
+    "README.md",
+    "img/README.jpg",
+    "img/README.png",
     "img/DAY 1 - DEVICES.jpg",
     "img/DAY 1 - DEVICES-1.jpg",
-    "DAY 1 - DEVICES.md",
     "img",
     "JITL/DAY 1 - DEVICES.md",
     "JITL/README",
@@ -169,12 +177,7 @@
     "CCNA",
     "CCNA/img/TestObsidian-1.png",
     "CCNA/img/TestObsidian.jpg",
-    "CCNA/img/TestObsidian.png",
     "CCNA/TestObsidian.md",
-    "img/Day 1 - Devices.png",
-    "img/Day 1 - Devices-1.png",
-    "img/Day 1 - Devices.jpg",
-    "Image 2.png",
     "CCNA/img",
     "Welcome.md"
   ]
