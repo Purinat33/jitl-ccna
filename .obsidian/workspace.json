@@ -1,0 +1,179 @@
+{
+  "main": {
+    "id": "4424b992ca4ea5e0",
+    "type": "split",
+    "children": [
+      {
+        "id": "204f50ce4cbda38d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d99e6e151bc5f0c3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "DAY 1 - DEVICES.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "79508298e89132ea",
+    "type": "split",
+    "children": [
+      {
+        "id": "b1768e83e8c1fd39",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "74f477f18e590579",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e5d2244cde4ef2d2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9c5bd3ca264c2555",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "5f576dc1acd64c81",
+    "type": "split",
+    "children": [
+      {
+        "id": "4a157a8ed86bc542",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d48cccdff74f992b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "DAY 1 - DEVICES.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f8f65d45a6474aea",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "DAY 1 - DEVICES.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b98217058f3ac7f7",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "6df11a51683a94e2",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "DAY 1 - DEVICES.md"
+              }
+            }
+          },
+          {
+            "id": "a7cfe114b719f4ab",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
+    }
+  },
+  "active": "d99e6e151bc5f0c3",
+  "lastOpenFiles": [
+    "img/DAY 1 - DEVICES.jpg",
+    "img",
+    "JITL/DAY 1 - DEVICES.md",
+    "JITL/README",
+    "JITL",
+    "CCNA",
+    "CCNA/img/TestObsidian-1.png",
+    "CCNA/img/TestObsidian.jpg",
+    "CCNA/img/TestObsidian.png",
+    "CCNA/TestObsidian.md",
+    "img/Day 1 - Devices.png",
+    "img/Day 1 - Devices-1.png",
+    "img/Day 1 - Devices.jpg",
+    "Image 2.png",
+    "CCNA/img",
+    "Welcome.md"
+  ]
+}
