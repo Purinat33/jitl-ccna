@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "204f50ce4cbda38d",
+        "id": "bd8f9b6bffef7ee8",
         "type": "tabs",
         "children": [
           {
-            "id": "d99e6e151bc5f0c3",
+            "id": "1790dbf81b94ff55",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -157,9 +157,11 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "d99e6e151bc5f0c3",
+  "active": "1790dbf81b94ff55",
   "lastOpenFiles": [
     "img/DAY 1 - DEVICES.jpg",
+    "img/DAY 1 - DEVICES-1.jpg",
+    "DAY 1 - DEVICES.md",
     "img",
     "JITL/DAY 1 - DEVICES.md",
     "JITL/README",

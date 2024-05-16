@@ -1,5 +1,5 @@
 {
-  "imageNamePattern": "img/{{fileName}}",
+  "imageNamePattern": "{{fileName}}",
   "dupNumberAtStart": false,
   "dupNumberDelimiter": "-",
   "dupNumberAlways": false,

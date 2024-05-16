@@ -1,6 +1,4 @@
 
-![[img/DAY 1 - DEVICES.jpg]]
-
 ```plantuml
 @startuml
 nwdiag {
@@ -18,3 +16,4 @@ nwdiag {
 ```
 
 
+![](img/DAY%201%20-%20DEVICES-1.jpg)
