@@ -7,4 +7,5 @@ JITL/.obsidian/workspace-mobile.json
 # Add below lines to exclude OS settings and caches
 .trash/
 .DS_Store
-JITL\.obsidian
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
