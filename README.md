@@ -11,10 +11,21 @@
 * ##### Pandoc extension CLI Argument:
 
 ```shell
---highlight-style tango --filter mermaid-filter.cmd -V geometry:a4paper,margin=2cm
+--highlight-style tango --filter mermaid-filter.cmd -V geometry:top=0.5in -V author:Purinat33 -V fontsize=12pt -V linestretch=1.2 -V papersize=a4
 ```
 
+* Pandoc setting
+	![[img/README-5.png]]
 * ##### [PDFLaTex (Installed with TexLive)](https://tug.org/texlive/windows.html#install)
+* CSS Snippet (style.css) in `.obsidian/snippets` folder:
+
+```css
+img[alt*="center"] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+```
 
 ## Extra contents I used/planned on using:
 
