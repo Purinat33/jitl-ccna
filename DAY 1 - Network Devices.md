@@ -18,8 +18,18 @@ nwdiag {
 
 ![](img/DAY%201%20-%20DEVICES-1.jpg)
 
-```Shell
-R1> en
+
+```java
+System.out.println("Hello World!");
 ```
 
-Test
+
+```{.mermaid format=png loc=img/}
+flowchart LR
+A-->B
+B-->C
+D-->A
+```
+
+
+
