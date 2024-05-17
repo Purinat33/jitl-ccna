@@ -38,3 +38,16 @@ Big thank  you to Jeremy and others for providing easy-to-understand Networking 
 
 <hr>
 
+## Tools used:
+* Obsidian Text editor
+	1. **Plugin**:
+		* Editor Syntax Highlight
+		* Excalidraw
+		* Git
+		* Mermaid Tool
+		* Pandoc
+		* Paste Image Rename
+			* Handle All Attachments: **true**
+			* Exclude patterns: **err**
+	2. **Setting**:
+		![](img/README-4.png)
