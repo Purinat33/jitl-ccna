@@ -140,10 +140,50 @@ Instead of copper + electricity, Fiber Optic uses *fiber glass* + *light beam*
 
 Ethernet Standards (**Fiber**): ***REMEMBER!***
 
-| Speed   | Common Name         | IEEE Standards | Informal Name | Maximum Length |
-| ------- | ------------------- | -------------- | ------------- | -------------- |
-| 1 Gbps  | Ethernet            | 802.3i         | 10Base-T      | 100m           |
-| 10 Gbps | Fast Ethernet       | 802.3u         | 100Base-T     | 100m           |
-| 10 Gbps | Gigabit Ethernet    | 802.3ab        | 1000Base-T    | 100m           |
-| 10 Gbps | 10 Gigabit Ethernet | 802.3an        | 10GBase-T     | 100m           |
-<u>Trivia</u>:
+| Speed   | Cable Type                 | IEEE Standards | Informal Name | Maximum Length         |
+| ------- | -------------------------- | -------------- | ------------- | ---------------------- |
+| 1 Gbps  | Multi-Mode<br> Single-Mode | 802.3z         | 1000Base-LX   | 550m (MM)<br> 5km (SM) |
+| 10 Gbps | Multi-Mode                 | 802.3ae        | 10GBase-SR    | 400m                   |
+| 10 Gbps | Single-Mode                | 802.3ae        | 10GBase-LR    | 10km                   |
+| 10 Gbps | Single-Mode                | 802.3ae        | 10GBase-ER    | 30km                   |
+![[img/DAY 2 - Interfaces and Cables-14.png]]
+Interference = EMI (Electromagnetic Interference)
+UTP emits a faint signal outside the cable. Fiber Optic doesn't.
+
+<hr>
+
+# Summary
+
+1. UTP Cabling standard.
+
+| Speed     | Common Name         | IEEE Standards | Informal Name | Maximum Length |
+| --------- | ------------------- | -------------- | ------------- | -------------- |
+| 10 Mbps   | Ethernet            | 802.3i         | 10Base-T      | 100m           |
+| 100 Mbps  | Fast Ethernet       | 802.3u         | 100Base-T     | 100m           |
+| 1000 Mbps | Gigabit Ethernet    | 802.3ab        | 1000Base-T    | 100m           |
+| 10 Gbps   | 10 Gigabit Ethernet | 802.3an        | 10GBase-T     | 100m           |
+
+2. Fiber Optic Cabling standard.
+
+| Speed   | Cable Type                 | IEEE Standards | Informal Name | Maximum Length         |
+| ------- | -------------------------- | -------------- | ------------- | ---------------------- |
+| 1 Gbps  | Multi-Mode<br> Single-Mode | 802.3z         | 1000Base-LX   | 550m (MM)<br> 5km (SM) |
+| 10 Gbps | Multi-Mode                 | 802.3ae        | 10GBase-SR    | 400m                   |
+| 10 Gbps | Single-Mode                | 802.3ae        | 10GBase-LR    | 10km                   |
+| 10 Gbps | Single-Mode                | 802.3ae        | 10GBase-ER    | 30km                   |
+
+3. UTP cabling connects to **RJ-45** connector and has 8 wires (4 pairs). Fiber Optic cable connects to **SFP** connector and has only 2 wires.
+4. **10Base-T** and **100Base-T** uses 2 pairs of UTP cable while **1000Base-T** and **10GBase-T** uses all 4 pairs, each being bidirectional.
+
+| Transmits on PIN 1,2  | Transmits on PIN 3,6 |
+| --------------------- | -------------------- |
+| PC                    | Hub                  |
+| Router                | Switch               |
+| Wireless Access Point | -                    |
+| Firewall              | -                    |
+
+5. Devices transmitting on the same pins are connected using **Crossover Cable** while opposite pins transmission uses **Straight Through Cable**. 
+6. Comparison between UTP, Single-Mode, and Multi-Mode
+   ![[img/DAY 2 - Interfaces and Cables-14.png]]
+
+<hr>
