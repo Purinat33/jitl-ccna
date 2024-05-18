@@ -125,12 +125,14 @@ Instead of copper + electricity, Fiber Optic uses *fiber glass* + *light beam*
 ![[img/DAY 2 - Interfaces and Cables-11.png]]
 
 ##### 2 Types of Fiber Optic Cables:
-1. **Single-Mode**: ![[img/DAY 2 - Interfaces and Cables-12.png]]
+1. **Single-Mode**: 
+   ![[img/DAY 2 - Interfaces and Cables-12.png]]
 	* Thinner core diameter than Multi-Mode
 	* Light enters at a single angle (Mode) from a laser-based transmission.
 	* Allows longer cables than both UTP and Multi-Mode fiber.
 	* More expensive than multi-mode fiber (laser-based transmitter)
-2. **Multi-Mode**:![[img/DAY 2 - Interfaces and Cables-13.png]]
+2. **Multi-Mode**:
+   ![[img/DAY 2 - Interfaces and Cables-13.png]]
 	* Core diameter is wider than single-mode fiber.
 	* Allows multiple angles (Modes) of light waves to enter the code.
 	* Allows longer cable than UTP but shorter than single-mode.
@@ -183,7 +185,8 @@ UTP emits a faint signal outside the cable. Fiber Optic doesn't.
 | Firewall              | -                    |
 
 5. Devices transmitting on the same pins are connected using **Crossover Cable** while opposite pins transmission uses **Straight Through Cable**. 
-6. Comparison between UTP, Single-Mode, and Multi-Mode
+6. Devices with capabilities to detect and correct crossover and straight-through cables are said to have **Auto MDI-X**.
+7. Comparison between UTP, Single-Mode, and Multi-Mode
    ![[img/DAY 2 - Interfaces and Cables-14.png]]
 
 <hr>
