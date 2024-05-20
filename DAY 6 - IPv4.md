@@ -100,3 +100,34 @@ eg. `192.168.6.4/24`
 <hr>
 
 # Summary
+
+**IPv4 Address Classification**:
+![[img/DAY 6 - IPv4-2.png]]
+
+![[img/DAY 6 - IPv4-1.jpg]]
+* `127.x.x.x`: **Loopback Address**, for testing networking on the local device.
+ 
+**IP Address**:
+* Separated in 4 Octets of 8 bits each.
+* Each octet can have value between `0` to `255`.
+* `x.x.x.x/y` with `/y` netmask denoting how many *bits* are part of the *Network* identifier, while the remaining bits identify the unique *host* within that Network.
+* **Important IP Address** given an IP:
+	* **Network IP**: The identifier of *the Network* itself.
+		* All Host bits = `0`
+	* **Broadcast IP**: The broadcast address of that network.
+		* All Host bits = `1`
+		  
+	<u>eg:</u> Given a **Class B** IP address of `172.16.59.4/16`:
+	1. **Netmask**: `/16`
+	2. **Network Portion**: `172.16`.59.4
+	3. **Host Portion**: 172.16.`59.4`
+	4. <u><b><i>Network Address</i></b></u>: `172.16.0.0`
+	5. <u><b><i>Broadcast Address</i></b></u>: `172.16.255.255`
+	6. **First Usable Address**: `172.16.0.1`
+	7. **Last Usable Host**: `172.16.255.254` 
+	   
+
+**Fast identifying important IPs will be in a separate note**
+
+<hr>
+
