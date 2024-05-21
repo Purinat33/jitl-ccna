@@ -134,13 +134,13 @@ We would ran out of time in any exam before we can do anything.
 
 `/26` is 4th octet.
 
-|              | 1st | 2nd | 3rd | 4th | Contains 26? |
-| ------------ | --- | --- | --- | --- | ------------ |
-| Original IP  | 192 | 168 | 1   | 186 | -            |
-| Set 4th = 0  | 192 | 168 | 1   | 0   | -            |
-| + Group Size | -   | -   | -   | 64  | No           |
-| + Group Size | -   | -   | -   | 128 | No           |
-| + Group Size | -   | -   | -   | 192 | Yes          |
+|              | 1st | 2nd | 3rd | 4th | Contains 186? |
+| ------------ | --- | --- | --- | --- | ------------- |
+| Original IP  | 192 | 168 | 1   | 186 | -             |
+| Set 4th = 0  | 192 | 168 | 1   | 0   | -             |
+| + Group Size | -   | -   | -   | 64  | No            |
+| + Group Size | -   | -   | -   | 128 | No            |
+| + Group Size | -   | -   | -   | 192 | Yes           |
 * **Broadcast Address**: `192.168.1.192` back down by 1 equals `192.168.1.191`
 * **Network Address**: `192.168.1.128` 
 * **First Host**: `192.168.1.129`
