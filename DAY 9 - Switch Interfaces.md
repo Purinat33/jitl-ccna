@@ -90,3 +90,11 @@ From SW1:
 * **Duplex**:
 	* If the speed is **10 or 100** Mbps, the switch will use **Half-Duplex**.
 	* If the speed is **1000 Mbps** or greater, the switch will use **Full-Duplex**. 
+![[img/DAY 9 - Switch Interfaces-14.png]]
+
+<hr>
+
+## Interfaces Error
+
+* `show interfaces {interface-name}` (Like routers).
+* Interesting statistics:
