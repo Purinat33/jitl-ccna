@@ -97,4 +97,65 @@ From SW1:
 ## Interfaces Error
 
 * `show interfaces {interface-name}` (Like routers).
-* Interesting statistics:
+![[img/DAY 9 - Switch Interfaces-15.png]]
+
+* Interesting statistics (Routers have similar statistics):
+![[img/DAY 9 - Switch Interfaces-16.png]]
+	* **Runts**: Frames that are *Smaller* than the minimum Frame size (*64 Bytes*)
+	* **Giants**: Frames that are *Larger* than the maximum Frame size (*1518 Bytes*)
+	* **CRC**: Frames that failed the CRC Check (*Ethernet FCS trailer*)
+	* **Frame**: Frames that have an incorrect format (due to errors)
+	* **Input Errors**: Total of various counters, including the above four.
+	* **Output Errors**: Frames the switch tried to send but failed due to errors.
+
+<hr>
+
+# Summary
+
+![[img/DAY 9 - Switch Interfaces-4.png | center]]
+
+* View switch's interfaces using `show interfaces status`
+	* Each interface do not have `shutdown` applied by default (**No `administratively down` like Routers**).
+	* Will be in `up/up` state if connected to another device.
+	* Be in `down/down` state if not connected.
+	* **Duplex**: `Full`, `half`, or `auto`
+	* **Speed**: Depends on the *slower* speed of either the interface or the device connected to the interface.
+	* **Type**: Slower speeds than the interface and up-to-and-including the speed of the interface. (100Mbps Interface includes both 10Mbps and 100Mbps **but** not 1000Mbps)
+
+![[img/DAY 9 - Switch Interfaces-17.png]]
+
+* View specific switch interface's detail using `show interfaces {interface-name}`
+	* **Runts**: Smaller than **64** Bytes (Minimum)
+	* **Giants**: Larger than **1518** Bytes (Maximum)
+	* **CRC**: Failed CRC Check
+	* **Frame**: Incorrect Format
+	* **Input Error**: Total Counters
+	* **Output Error**: Switch failed to send
+
+* **Duplex**: Direction of data communication.
+	* **Full**: Send and Receive at the same time (eg. **SWITCH** networks).
+	* **Half**: Must wait before sending (eg. **HUB** networks)
+		* **HUB**: 
+			* Considered to be a *Layer 1* device due to no MAC address nor table being used. 
+			* Will **always broadcast frames** regardless of type.
+			* **Collisions** common.
+		* **CSMA/CD**:
+			* Used in **Half-Duplex** situation.
+			* <u><b>C</b></u>arrier <u><b>S</b></u>ense <u><b>M</b></u>ultiple <u><b>A</b></u>ccess *with* <u><b>C</b></u>ollision <u><b>D</b></u>etection
+			* Devices *listen* to the collision domain.
+			* If a collision occur, the device sends a jamming signal to the collision domain.
+			* Each device waits a random period of time before resending frames again.
+
+![[img/DAY 9 - Switch Interfaces-7.png]]
+
+* **Auto-Negotiation** (`speed` and `duplex`):
+	* Interfaces usually can run at different speeds (**10/100** or **10/100/1000**) have default settings of `speed auto` and `duplex auto`.
+	* Interfaces **advertise** their capabilities to connected device and negotiate the `speed` and `duplex`.
+	* **If Auto-Negotiation is Disabled**:
+		* **Speed**: 
+			* Try sensing the speed the connected device is operating at. If failed, it uses the *slowest supported speed*. (**10Mbps** on a **10/100/1000** Interface)
+		* **Duplex**: 
+			* Speed of **10 or 100Mbps**, the switch uses **Half-Duplex**.
+			* Speed of **1000Mbps** or higher, the switch uses **Full-Duplex**.
+
+<hr>

@@ -54,12 +54,12 @@
 
 # Summary:
 
-1. `R1# show ip address brief`: View information about IP Addresses on each router's interface.
+1. `show ip interface brief`: View information about IP Addresses on each router's interface.
 	1. **Administratively Down**: Interface is disabled with a `shutdown` command, a default **Status** for routers.
 	2. **Protocol**: Data Link Layer's Status.
-2. `R1# show interfaces g0/0`: View information about a *specific* interface.
-3. `R1(config)# interface g0/0`: Enter a specific interface configuration (eg. **G0/0**)
-4. `R1(config-if)# ip address 192.168.1.1 255.255.255.0` 
+2. `show interfaces g0/0`: View information about a *specific* interface.
+3. `interface g0/0`: Enter a specific interface configuration (eg. **G0/0**)
+4. `ip address 192.168.1.1 255.255.255.0` 
 	* Will still be disabled until a `no shutdown` on that interface is performed.
 
 <hr>
