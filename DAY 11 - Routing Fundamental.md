@@ -112,6 +112,45 @@ We will cover **Subnetting** later, for now just know that these three lines are
 
 ## Route Selection (Practice):
 
+1. **Packet 1**:
+	![[img/DAY 11 - Routing Fundamental-16.png]]
+	* Most matching route: `192.168.13.0/24` via **G0/0** interface.
+2. **Packet 2**:
+	![[img/DAY 11 - Routing Fundamental-18.png]]
+	* Most matching route: `192.168.1.0/24` via **G0/2** interface.
+3. **Packet 3** (`192.168.12.1`):
+	![[img/DAY 11 - Routing Fundamental-19.png]]
+	* Most matching route: `192.168.12.1/32` At the **G0/1** interface.
+4. **Packet 4**:
+	![[img/DAY 11 - Routing Fundamental-20.png]]
+	* Most matching route: **None**, R1 will drop the packet.
+
 <hr>
 
 # Summary
+
+![[img/DAY 11 - Routing Fundamental.jpg | center | 600]]
+
+* Routers store information about destinations they know in their *Routing Table*.
+	* When they receive packets, they look in the routing table to find the best route to forward the packet.
+* Each **Route** in the routing table is an instruction:
+	* To reach destinations in **`Network X`**, send the packet to **`Next-Hop Y`** (The next router in the path to the destination).
+		* If the destination is directly connected (**Connected Route**), then send the packet directly to the destination.
+		* If the destination is your own IP Address (**Local Route**), then receive the packet for yourself.
+* When you configured an IP address on an interface and enable the interface, **Two Routes** are automatically added to the routing table:
+	* **Connected Route** (Code **`C`** in the routing table): A route to the network connected to the interface.
+		* If the interface's IP is `192.168.1.1/24`, the `C` route will be to `192.168.1.0/24`
+		* Tells the router: "To send a packet to a destination in this network, send it out of the interface specified in the route."
+	* **Local Route** (Code **`L`** in the routing table): A route to the **exact** IP address configured on the interface.
+		* If the interface's IP is `192.168.1.1/24`, the **`L`** route will be to `192.168.1.1/32`
+		* Tells the router: "Packets to this destination are for you, you should receive them for yourself only".
+* A route **Matches** a destination if the packet's destination IP address is part of the network specified in the route.
+	* A packet to `192.168.1.70` is matched by a route to `192.168.1.0/24` **but not** `192.168.0.0/24`
+* If a router receives a packet and it doesn't have a route that matches the packet's destination, it will **Drop** the packet.
+	* This is different from **Switches**, which will **Flood** the frames if they don't have a **MAC Entry** for the Frame's destination.
+* If a router receives a packet and it has multiple routes that match the packet's destination, it will use the **Most Specific** matching route to forward the packet.
+	* **Most Specific Matching Route** = The matching route with the **longest** prefix length.
+		* **`192.168.1.1`**: `192.168.1.1/32` > `192.168.1.0/24`
+	* This is different from **Switches**, which look for an **Exact Match**.
+
+<hr>
