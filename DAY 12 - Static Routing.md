@@ -45,6 +45,90 @@ R2 knows how to reach its own IP addresses and destinations in its connected net
 		* The **Local Route** is the ***MOST*** specific route possible, because it includes ***One*** IP address.
 			* `192.168.1.1/32` = 1 IP address.
 * End hosts usually have no need for any more specific routes.
-	* They just need to know that *"To send packets outside my local network, I should send them to my default gateway."*
+	* They just need to know that *"To send packets outside my local network, I should send them to my **default gateway**."*
+		* **Source IP**: `192.168.1.10`
+		* **DST IP**: `192.168.4.10`
+		* ***DST MAC***: R1's **G0/0** MAC
+			* To learn R1's **G0/0** MAC address, PC1 will first send an **ARP Request** to `192.168.1.1`
+		* **SRC MAC**: PC1's **eth0** MAC
 
-### IP and MAC relationship
+![[img/DAY 12 - Static Routing-3.png | center | 600]]
+
+* When R1 receives the frame from PC1, it will de-encapsulate it (remove L2 header/trailer) and look at the inside packet.
+* It will check its routing table for the most specific matching route:
+	![[img/DAY 11 - Routing Fundamental-4.png| center | 650]]
+* R1 has no matching routes in its routing table.
+	* It will drop the packet.
+* To properly forward the packet, R1 needs a route to the destination network of `192.168.4.0/24`.
+	* Routes are instructions: *"To send a packet to destinations in network **`192.168.4.0/24`**, forward the packet to **`Next Hop Y`**"*
+* There are two possible path packets from **PC1 to PC4** can take:
+	1. PC1 → R1 → **R3** → R4 → PC4
+	2. PC1 → R1 → **R2** → R4 → PC4
+	* For now, we will use the path via **R3** and not **R2**
+		* Though it is possible to configure the routers to:
+			* **Load-Balance** between path `1` and path `2`.
+			* Use path `1` as the main path and path `2` as a backup path.
+
+<hr>
+
+## Static Route Configuration
+
+![[img/DAY 12 - Static Routing-3.png | center | 600]]
+
+* Each router in the path needs ***TWO*** routes:
+	* a route to `192.168.1.0/24` (**PC1** network) and
+	* a route to `192.168.4.0/24` (**PC4** network)
+* This ensures **Two-Way Reachability** 
+	* **PC1** can send packets to **PC4** & Vice-Versa.
+* Routers don't need routes to all networks in the path to the destination.
+	* **R1** doesn't need a route to `192.168.34.0/24`, it only needs to know a route to **R3**. **R3** will handle the route to `192.168.34.0/24` by itself.
+	* **R4** also doesn't need a route to `192.168.13.0/24`, **R3** will handle it.
+* **R1** already has a **Connected Route** to `192.168.1.0/24`.
+* **R4** already has a **Connected Route** to `192.168.4.0/24`
+* The other routes (Non-**Connected Routes**) still needed to be manually configured using **Static Route**.
+<br><br>
+![[img/DAY 12 - Static Routing-3.png | center | 600]]
+
+| Router |   Destination    |    Next-Hop    |   Note    |
+| :----: | :--------------: | :------------: | :-------: |
+| **R1** | `192.168.1.0/24` | **Connected**  |     -     |
+|        | `192.168.4.0/24` | `192.168.13.3` | R3's G0/0 |
+|        |                  |                |           |
+| **R3** | `192.168.1.0/24` | `192.168.13.1` | R1's G0/2 |
+|        | `192.168.4.0/24` | `192.168.34.4` | R4's G0/1 |
+|        |                  |                |           |
+| **R4** | `192.168.1.0/24` | `192.168.34.3` | R3's G0/1 |
+|        | `192.168.4.0/24` | **Connected**  |     -     |
+* To allow **PC1 and PC4** to communicate with each other over the network, we will configure the **Static Routes** on **R1, R3, R4** based on the pre-planning table above.
+* Use  **`ip route`**`ip-address netmask next-hop`
+	* Where:
+		* `ip-address`: The **Destination**'s IP address.
+		* `netmask`: The netmask of Destination's network.
+		* `next-hop`: Next-Hop IP Address
+### Demo:
+
+![[img/DAY 12 - Static Routing-7.png | center | 700]]
+
+* Added R1's **Static Route** via: 
+	`ip route 192.168.4.0 255.255.255.0 192.168.13.3`
+	* Where:
+		* `192.168.4.0` = Destination Network
+		* `255.255.255.0` = Destination Netmask
+		* `192.168.13.3` = Next Hop
+* A Code **`S`** **Static Route** is added.
+	* The **[1/0]** display for **Static Routes** means:
+		* **[Administrative Distance / Metric]**
+		* The concept will be covered later.
+
+![[img/DAY 12 - Static Routing-8.png]]
+* R3 needed 2 routes.
+
+![[img/DAY 12 - Static Routing-10.png]]
+* R4 needed 1 route.
+
+<hr>
+
+## Testing Communication
+
+If the ping is successful, it means that there is two-way reachability.
+PC1 can reach PC4 and vice-versa.
