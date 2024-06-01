@@ -132,3 +132,53 @@ R2 knows how to reach its own IP addresses and destinations in its connected net
 
 If the ping is successful, it means that there is two-way reachability.
 PC1 can reach PC4 and vice-versa.
+![[img/DAY 12 - Static Routing.jpg]]
+
+Note the relationship between IP and MAC address. (**ARP**ing for the **MAC** of the next hop while the IP address stay the same until the end).
+
+<hr>
+
+## `exit-interface`
+
+Instead of configuring next hop, we can configure an exit interface (just send a packet out of this) instead of explicitly telling the ip address of the next hop.
+
+* **`ip route`** `ip-address netmask` *`exit-interface`*
+* **`ip route`** `ip-address netmask` *`exit-interface`* `next-hop` 
+
+![[img/DAY 12 - Static Routing-11.png]]
+**Note**: Specifying only the `exit-interface` without a `next-hop` will show the Static Route as directly connected.
+
+It is better to specify `next-hop` instead of only having `exit-interface` and without specifying a `next-hop`.
+
+<hr>
+
+## Default Route
+
+* A **Default Route** is a route to `0.0.0.0/0`
+	* `0.0.0.0/0 is the *least specific* route possible; it includes every possible IP address.
+* If the router doesn't have any more specific routes that match a packet's destination IP address, the router will forward the packet using the **Default Route**.
+* A default route is often used to direct traffic to the internet.
+	* More specific routes are used for destinations in the internal corporate network.
+	* Traffic to destinations outside of the internal network is sent to the internet.
+	  ![[img/DAY 11.5 - Static Routing.png]]
+	  ![[img/DAY 11.5 - Static Routing-1.png]]
+* Gateway of last resort usually means the default route.
+* Same structure of command as other `ip route` settings.
+
+<hr>
+
+![[img/DAY 11.5 - Static Routing-2.png]]
+
+<hr>
+
+# Packet Tracer Lab
+
+## Configuration
+
+![[img/DAY 11.5 - Static Routing-3.png]]
+
+## Troubleshooting
+
+![[img/DAY 11.5 - Static Routing-4.png]]
+
+<hr>
