@@ -66,3 +66,9 @@ This is already covered in previous days, but this is more of a summary into one
 5. **R1** encapsulates the still-the-same IPv4 header with the new Ethernet Header, with **R2's g0/0** MAC Address being the destination MAC Address.
 
 The same pattern is used for **R2 to R4** and **R4 to PC4** with the **ARP Request/Reply** for the MAC address of the next hop, **De-Encapsulation** of the Ethernet Header at each hop while the IPv4 Packet stays the same the entire time.
+
+<hr>
+
+# LAB:
+
+![[img/DAY 12  - Packet Life Cycle-5.png]]
