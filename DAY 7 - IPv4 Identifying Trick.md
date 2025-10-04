@@ -72,9 +72,9 @@ We would ran out of time in any exam before we can do anything.
 | **3<sup>rd**   | /17              | /18 | /19 | /20 | /21 | /22 | /23 | /24 |
 | **2<sup>nd**   | <u><b>/9</b></u> | /10 | /11 | /12 | /13 | /14 | /15 | /16 |
 | **1<sup>st**   | /1               | /2  | /3  | /4  | /5  | /6  | /7  | /8  |
-	* `/9` is associated with the 2nd octet.
-	* Looking at the 2nd octet, we set that octet (and the 3rd & 4th octet) to `0` then **increment** the original 2nd octet by the **Group Size** until the value of the 2nd octet is **Greater than or equal** the **Original**'s 2nd octet. 
-		* (Increment must happened at least once even if the set-0 of that octet is already `0`)
+* `/9` is associated with the 2nd octet.
+* Looking at the 2nd octet, we set that octet (and the 3rd & 4th octet) to `0` then **increment** the original 2nd octet by the **Group Size** until the value of the 2nd octet is **Greater than or equal** the **Original**'s 2nd octet. 
+	* (Increment must happened at least once even if the set-0 of that octet is already `0`)
 
 | Octet             | 1<sup>st | 2<sup>nd | 3<sup>rd | 4<sup>th | Contain 0? |
 | ----------------- | -------- | -------- | -------- | -------- | ---------- |

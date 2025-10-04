@@ -97,7 +97,7 @@ Though modern devices possess **Auto MDI-X** capability, which automatically det
 
 ##### `1000Base-T` and `10GBase-T` cabling <br>
 
-All 8 wires (4 pairs) are used. Each wire is bidirectional.
+All 8 wires (4 pairs) are used. Each wire is bidirectional. Concepts of **Cross Over** and **Straight Through** still apply. (1,2), (3,6), (4,5), (7,8)
 
 ![[img/DAY 2 - Interfaces and Cables-9.png]]
 
