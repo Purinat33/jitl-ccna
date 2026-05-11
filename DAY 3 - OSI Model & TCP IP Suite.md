@@ -1,5 +1,8 @@
 # OSI Model & TCP/IP Suite
 Networking models help categorize and provide a structure for networking **protocols** and **standards**.
+* A **protocol** is a set of rules defining how data should be communicated between devices over a network.
+* A **standard** is an agreed-upon specification that describes how a protocol or technology should work.
+	* With **vendor-neutral** standards, devices of all types can communicate with each other.
 
 **Encapsulation/De-Encapsulation**:
 ![[img/DAY 3 - OSI Model & TCP IP Suite-1.png]]
