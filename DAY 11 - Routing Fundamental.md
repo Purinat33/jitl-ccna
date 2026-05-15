@@ -7,7 +7,7 @@
 2. There are *two* main routing methods (methods that routers use to learn routes):
 	1. **Dynamic Routing**: Routers use Dynamic Routing Protocols (eg. `OSPF`) to share routing information with each other automatically and build their routing tables.
 	2. **Static Routing**: A network engineer/admin manually configures routes on the router.
-3. A route tells the router: _To send a packet to **`Destination X`**, it should send the packet to ***`Next Hop Y`***_.
+3. A route tells the router: _To send a packet to **`Destination X`**, it should send the packet to ***`Next Hop Y`***_. (Next Hop = Next Router)
 	1. Or, if the destination is directly connected to the router, send the packet directly to the **Destination**.
 	2. Or, if the destination is the router's own IP address, then **Receive the Packet for Yourself** (and don't forward).
 
