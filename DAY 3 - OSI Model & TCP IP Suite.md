@@ -40,21 +40,21 @@ The basic unit of data for each layer.
 	1. <u><b>Segments</b> large data into smaller data and reassemble data back.</u> for easier transmission than 1 large data at once.
 	2. Provides **Host-to-Host** (**_Process-to-Process_** is also a popular methodology) communication.
 	3. Add *Layer 4 Header* to the data during encapsulation.
-	4. L4 PDU = **Segment**
-3. <u><b>Network Layer</b></u>:
+	4. L4 PDU = **Segment** (TCP) or **Datagram** (UDP)
+5. <u><b>Network Layer</b></u>:
 	1. Provides connectivity between *end-hosts* **on different networks** (eg. outside of the LAN)
 	2. Provide **End-to-End** communication.
 	3. Provide **Logical Addressing (IP Addresses)**
 	4. Layer 3 device: **Router**
 	5. L3 PDU = **Packet**
-2. <u><b>Data Link Layer</b></u>:
+6. <u><b>Data Link Layer</b></u>:
 	1. Provide **Hop-to-Hop**/**Node-to-Node** communication.
 	2. Defines how data is formatted for transmission over a physical medium (eg. copper UTP cables)
 	3. **Detects and corrects Physical Layer errors**
 	4. Provide **Physical Addressing (MAC Addresses)**
 	5. Layer 2 device: **Switch**
 	6. L2 PDU = **Frame** 
-1. <b><u>Physical Layer</u></b>:
+7. <b><u>Physical Layer</u></b>:
 	1. Define physical characteristics of the medium used to transfer. (eg. Voltage Level, Maximum Transmission Distances, Physical Connectors, Cable etc.)
 	2. Digital bits are converted to electrical (wired) or radio (wireless)
 	3. Information from [DAY 2 - Interfaces and Cables](https://youtu.be/ieTH5lVhNaY) are related to this layer.

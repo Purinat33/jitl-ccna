@@ -27,6 +27,10 @@ From SW1:
 		* eg: **10 Mbps** device connecting to the **100 Mbps** port will make the communication speed of this conncetion = **10 Mbps**.
 	* **Type**: `10` (**Ethernet**, Slower than **Fa**) and `100` (**Fast Ethernet** or **Fa**)
 		* No `1000` or `10G` since these are **Fa** (**Fast Ethernet**) interfaces an not **G** (**Gigabit Ethernet**)
+* **Configure MULTIPLE interfaces at once** via `interface range {range_1}, {range_2}, ..., {range_n}` 
+	* e.g.: `interface range f0/5-6, f0/9-12` for interface:
+		* F0/5, F0/6
+		* F0/9, F0/10, F0/11, F0/12
 
 ### Duplex:
 
